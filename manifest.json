@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Github commit time sort",
+  "version": "0.1.0",
+
+  "description": "A plain text description",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*",
+        "https://github.com/*/tree/*"
+      ],
+      "js": ["dist/index.js"]
+    }
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+W",
+        "mac": "MacCtrl+Shift+W"
+      },
+      "description": "Opens hello.html"
+    }
+  }
+  "author": "msymt"
+}
